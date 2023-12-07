@@ -14,7 +14,7 @@ To run this application locally, you will need Python installed on your system. 
 
 ```bash
 pip install -r requirements.txt
-
+```
 then run the following from inside the project directory:
 
 ```bash
