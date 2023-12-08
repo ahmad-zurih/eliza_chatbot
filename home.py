@@ -20,11 +20,10 @@ def main():
     user_input = st.text_input("You: ", key="user_input", value="")
 
     # Handling the response
-    if st.button("Send"):
-        if user_input:
-            eliza_response = get_eliza_response(user_input)
-            st.session_state.history.append(f"You: {user_input}")
-            st.session_state.history.append(f"Eliza: {eliza_response}")
+    if st.button("Send") or user_input:
+        eliza_response = get_eliza_response(user_input)
+        st.session_state.history.append(f"You: {user_input}")
+        st.session_state.history.append(f"Eliza: {eliza_response}")
 
     # Display conversation history
     for message in st.session_state.history:
